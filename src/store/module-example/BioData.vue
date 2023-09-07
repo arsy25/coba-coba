@@ -42,11 +42,13 @@ export default {
     }
   },
   methods: {
+    //tombol untuk hitung umur dan seleksi ktg
+    //TBT = tgl bln tahun
     hitungUmur () {
       if (this.tanggalLahir) {
-        const dateParts = this.tanggalLahir.split('/')
-        if (dateParts.length === 3) {
-          const tanggalLahir = new Date(`${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`)
+        const TbT = this.tanggalLahir.split('/')
+        if (TbT.length === 3) {
+          const tanggalLahir = new Date(`${TbT[2]}-${TbT[1]}-${TbT[0]}`)
           const sekarang = new Date()
           const selisihTahun = sekarang.getFullYear() - tanggalLahir.getFullYear()
 
@@ -62,7 +64,7 @@ export default {
             this.kategori = 'Dewasa'
           }
 
-          // Menambahkan kode untuk mencetak ke console
+          // cek konsol
           console.log(`Nama: ${this.nama}`)
           console.log(`Alamat: ${this.alamat}`)
           console.log(`Tanggal Lahir: ${this.tanggalLahir}`)

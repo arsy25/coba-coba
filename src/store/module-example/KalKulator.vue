@@ -4,7 +4,7 @@
       <q-card-section>
         <div class="text-center text-h4">Kalkulator</div>
         <div class="q-mb-md">
-          <q-input rounded outlined v-model="expression" @input="clearResult" placeholder="yok itung disini"></q-input>
+          <q-input rounded outlined v-model="InputAngka" @input="clearResult" placeholder="yok itung disini"></q-input>
         </div>
         <div class="q-gutter-sm q-mt-sm">
           <q-btn color="primary" label="7" @click="Muncul('7')" />
@@ -26,7 +26,7 @@
         </div>
         <div class="q-gutter-sm q-mt-sm">
           <q-btn color="primary" label="0" @click="Muncul('0')" />
-          <q-btn color="primary" label="C" @click="clearExpression" />
+          <q-btn color="primary" label="C" @click="clearInputAngka" />
           <q-btn color="primary" label="=" @click="calculateResult" />
           <q-btn color="primary" label="/" @click="Muncul('/')" />
         </div>
@@ -42,16 +42,16 @@
 export default {
   data () {
     return {
-      expression: '',
+      InputAngka: '',
       result: ''
     }
   },
   methods: {
     Muncul (value) {
-      this.expression += value
+      this.InputAngka += value
     },
-    clearExpression () {
-      this.expression = ''
+    clearInputAngka () {
+      this.InputAngka = ''
       this.result = ''
     },
     clearResult () {
@@ -60,7 +60,7 @@ export default {
     calculateResult () {
       try {
         // eslint-disable-next-line no-eval
-        const result = eval(this.expression)
+        const result = eval(this.InputAngka)
         this.result = result.toString()
       } catch (error) {
         this.result = 'Error'
@@ -69,3 +69,4 @@ export default {
   }
 }
 </script>
+
