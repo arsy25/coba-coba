@@ -1,35 +1,6 @@
 <template>
   <q-layout>
-    <q-card class="bg-black">
-
-      <!--ini toolbarnya-->
-      <div class="row q-pa-md flex flex-center">
-
-        <div class="col flex flex-center">
-        <q-btn rounded flat style="width: 200px" class="" label="Kalkulator"
-          :to="{ path: '/kalkulator' }">
-          <q-tooltip
-            class="text-cyan-3 bg-black text-center"
-            transition-show="rotate"
-            style="width: 100px" transition-hide="rotate">
-            Halaman Kalkulator
-          </q-tooltip>
-        </q-btn>
-      </div>
-
-        <div class="col flex flex-center">
-          <q-btn rounded flat style="width: 200px" class="" label="Input Data"
-            :to="{ path: '/input_biodata' }">
-          <q-tooltip
-            class="text-cyan-3 bg-black text-center"
-            transition-show="rotate"
-            style="width: 100px" transition-hide="rotate">
-            Halaman Input Biodata
-            </q-tooltip>
-          </q-btn>
-        </div>
-
-      </div>
+    <q-card class="bg-primary">
 <q-page-container>
   <RouterView />
 </q-page-container>
