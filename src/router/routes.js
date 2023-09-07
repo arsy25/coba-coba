@@ -4,8 +4,8 @@ const routes = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: '', component: () => import('pages/IndexPage.vue') },
-      { path: '/input_biodata', name: 'biodata', component: () => import('pages/BioData.vue') },
-      { path: '/kalkulator', component: () => import('pages/KalKulator.vue') }
+      { path: '/input_biodata', component: () => import('pages/BioData.vue') }
+      // { path: '/kalkulator', component: () => import('pages/KalKulator.vue') }
     ]
   },
 
